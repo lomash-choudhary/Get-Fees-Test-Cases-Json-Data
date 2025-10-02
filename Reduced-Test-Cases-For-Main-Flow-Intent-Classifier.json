@@ -1,0 +1,154 @@
+{
+  "test_cases": [
+    {
+      "id": 1,
+      "query": "hi",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "id": 2,
+      "query": "hello there",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "id": 3,
+      "query": "weather today",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "id": 4,
+      "query": "connect me to support",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "id": 5,
+      "query": "I need help",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "id": 6,
+      "query": "what can you do",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "id": 7,
+      "query": "this is not working",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "id": 8,
+      "query": "failed transaction",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "id": 9,
+      "query": "how do i fund my account",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "id": 10,
+      "query": "check my balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "id": 11,
+      "query": "add money to my account",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "id": 12,
+      "query": "show my transaction history",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "id": 13,
+      "query": "I need a receipt",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "id": 14,
+      "query": "send 1000 INR to prakarsh",
+      "expected_agent": "SENDING"
+    },
+    {
+      "id": 15,
+      "query": "transfer money to john",
+      "expected_agent": "SENDING"
+    },
+    {
+      "id": 16,
+      "query": "I want to send $50 to my friend",
+      "expected_agent": "SENDING"
+    },
+    {
+      "id": 17,
+      "query": "create a new beneficiary",
+      "expected_agent": "SENDING"
+    },
+    {
+      "id": 18,
+      "query": "what's the minimum transfer amount",
+      "expected_agent": "SENDING"
+    },
+    {
+      "id": 19,
+      "query": "what currencies do you support",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "id": 20,
+      "query": "change my default currency to EUR",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "id": 21,
+      "query": "do you support GBP",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "id": 22,
+      "query": "whats the fees to send 1000 INR",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "id": 23,
+      "query": "how much does it cost to transfer $100",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "id": 24,
+      "query": "what are the transfer charges",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "id": 25,
+      "query": "what are the fees?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "id": 26,
+      "query": "hey how much to send 50 bucks?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "id": 27,
+      "query": "I want to send money and check my balance",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "id": 28,
+      "query": "send money pls",
+      "expected_agent": "SENDING"
+    },
+    {
+      "id": 29,
+      "query": "💰 send money",
+      "expected_agent": "SENDING"
+    },
+    {
+      "id": 30,
+      "query": "",
+      "expected_agent": "UNKNOWN"
+    }
+  ]
+}

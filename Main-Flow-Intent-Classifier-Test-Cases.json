@@ -1,0 +1,864 @@
+{
+  "test_cases": [
+    {
+      "query": "hi",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "hello there",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "good morning",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "hey",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "good evening",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "what's up",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "connect me to support",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I need to talk to an agent",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "speak to a human",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "help me",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I need assistance",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "can someone help me",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I have a complaint",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "this is not working",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I'm having issues",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "contact customer service",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "escalate to manager",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I want to file a report",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "what can you do",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "how does this platform work",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "what services do you offer",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "tell me about your company",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "how do i fund my account",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "add money to my account",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "top up my wallet",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "deposit funds",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "I want to add 100 USD to my account",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "how to deposit money",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "fund my wallet with 500 EUR",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "I need to top up 200 dollars",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "how much money can I add",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "what's the maximum deposit amount",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "minimum deposit amount",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "can I add 10000 USD",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "check my balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "show my account balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "how much money do I have",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "what's my current balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "account balance please",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "show my transaction history",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "transaction history",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "my recent transactions",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "show me my transfers",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "payment history",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "I need a receipt",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "send me the receipt",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "transaction receipt",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "proof of payment",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "send 1000 INR to prakarsh",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "transfer money to john",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "I want to send $50 to my friend",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "send 100 EUR to Germany",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "transfer 200 GBP to UK",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "I need to send money to India",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "how to send money",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "transfer funds to my family",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "send money internationally",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "I want to make a transfer",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "remit money to Philippines",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "wire transfer to USA",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "create a new beneficiary",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "add recipient",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "add new contact for transfer",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "manage my beneficiaries",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "update recipient details",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "delete a beneficiary",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "what currencies do you support",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "change my default currency to EUR",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "do you support GBP",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "list of supported currencies",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "can I use Japanese Yen",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "switch to USD",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "update my currency preference",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "change currency to CAD",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "is AUD available",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "what about cryptocurrency",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "do you accept Bitcoin",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "current exchange rates",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "USD to EUR rate",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "whats the fees to send 1000 INR",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "how much does it cost to transfer $100",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "what are the transfer charges",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "fees for sending 50 EUR",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "what will I be charged",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "cost to send 200 GBP",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "what's your fee structure",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "how much commission do you charge",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "transfer fees to India",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "pricing for international transfers",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "are there any hidden charges",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "what percentage do you charge",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "is there a fixed fee",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "cost breakdown for 500 USD transfer",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "fees for depositing money",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "how much to top up 100 dollars",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "deposit charges",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "what are the fees?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "how much does it cost?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "fees for sending money to Europe?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "I want to transfer 100",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "send money to India",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "cost to send to my friend?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "fees for 0.50 EUR",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "what does it cost to send 10000 USD",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "I want to send 100.50 EUR, what's the fee",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "fees for 33.33 GBP",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "cost for 1 USD transfer",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "hey how much to send 50 bucks?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "yo what's the fee for 100 euros",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "I need to know the cost of sending $75",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "quick question - fees for 40 EUR?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "just checking, how much for 200 dollars?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "I want to send 100 USD to India, what's the fee and how much INR will they receive?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "If I top up 500 dollars and then send 200 EUR, what's my total cost?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "What's the difference between sending 50 EUR and topping up 50 EUR?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "Can you explain how your fees work for a 100 dollar transfer?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "I need help with sending money and also want to know the fees",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "How do I send money and check my balance?",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "What's cheaper, sending 50 EUR or 100 EUR?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "Do bigger transfers cost less?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "Is it better to send one large amount or multiple small ones?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "How do your fees compare for 100 USD vs 1000 USD?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "Can I send less than 1 euro?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "What's the minimum transfer limit?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "What's the minimum I can send to India?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "What's the minimum transfer amount in EUR?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "How much is the minimum to send in GBP?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "What's the smallest amount I can transfer to Europe?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "Minimum amount for INR transfers?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "What's the maximum I can send?",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "Transfer limits",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "Daily transfer limit",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "something random",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "weather today",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "how to cook pasta",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "what time is it",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "play music",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "book a flight",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "translate this text",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "tell me a joke",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "what's 2+2",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "how old are you",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "...",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "???",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "ok",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "thanks",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "thank you",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "bye",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "goodbye",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "see you later",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "cancel",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "stop",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "never mind",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "forget it",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "I changed my mind",
+      "expected_agent": "UNKNOWN"
+    },
+    {
+      "query": "balance transfer",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "wallet balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "account statement",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "show transactions",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "payment received",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "refund status",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "failed transaction",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "transaction stuck",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "money not received",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "transfer failed",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "wrong amount sent",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I sent money to wrong person",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "dispute transaction",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "unauthorized transaction",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "account locked",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "password reset",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "forgot password",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "change password",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "update phone number",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "change email address",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "verify my identity",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "KYC verification",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "upload documents",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "account verification",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "business account",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "corporate transfers",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "API documentation",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "integrate your service",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "white label solution",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "partnership opportunities",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I want to send £100 to my mum in London and also check what currencies you support",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "Can I fund my account with GBP and what are the fees?",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I need to send money, check my balance, and update my currency preference",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "How much will it cost me to send 500 EUR to France and can I do it in installments?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "What are your fees and do you support all major currencies?",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "I want to know about fees, minimum amounts, and currency support",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "send €",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "£100 transfer",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "$50 fee",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "¥1000 cost",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "₹500 charge",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "deposit €100",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "fund $200",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "add £50",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "I want to SEND money",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "FEES please",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "CHECK my balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "CHANGE currency",
+      "expected_agent": "CURRENCY_UPDATE"
+    },
+    {
+      "query": "SUPPORT needed",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "send money pls",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "wats the fee",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "chk balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "hlp me",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "xfer money",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "💰 send money",
+      "expected_agent": "SENDING"
+    },
+    {
+      "query": "💳 check balance",
+      "expected_agent": "FUNDING"
+    },
+    {
+      "query": "💸 what are fees?",
+      "expected_agent": "GET_FEES"
+    },
+    {
+      "query": "🆘 help",
+      "expected_agent": "SUPPORT"
+    },
+    {
+      "query": "💱 change currency",
+      "expected_agent": "CURRENCY_UPDATE"
+    }
+  ]
+}

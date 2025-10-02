@@ -1,0 +1,154 @@
+{
+  "test_cases": [
+    {
+      "id": "POT-001",
+      "question": "I want to verify my phone number",
+      "expected_answer": "I've sent a verification code to your phone number. Please enter the 6-digit code you received.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: sendPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_abc123_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***7843"
+    },
+    {
+      "id": "POT-002",
+      "question": "Send me an OTP code",
+      "expected_answer": "I've sent a verification code to your phone number. Please enter the 6-digit code you received.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: sendPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_def456_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***7843"
+    },
+    {
+      "id": "POT-003",
+      "question": "My verification code is 123456",
+      "expected_answer": "Perfect! Your phone number has been successfully verified. You can now proceed with KYC verification.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"123456\"\n}\n🆔 Call ID: call_ghi789_checkOtp\n📤 Result: Phone verification successful. User status: KYC_NEEDED"
+    },
+    {
+      "id": "POT-004",
+      "question": "Update my phone number to +91 9068673843",
+      "expected_answer": "I've successfully updated your phone number to +91 9068673843.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"+91 9068673843\"\n}\n🆔 Call ID: call_jkl012_updateUser\n📤 Result: User phone number updated successfully to +91 9068673843"
+    },
+    {
+      "id": "POT-005",
+      "question": "Change my phone number",
+      "expected_answer": "I can help you update your phone number. Please provide your new phone number with country code (example: +1-555-123-4567):"
+    },
+    {
+      "id": "POT-006",
+      "question": "789012",
+      "expected_answer": "I couldn't verify that code. Please check the code and try again, or I can resend a new verification code if needed.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"789012\"\n}\n🆔 Call ID: call_mno345_checkOtp\n📤 Result: Invalid OTP code. Verification failed."
+    },
+    {
+      "id": "POT-007",
+      "question": "Resend the code please",
+      "expected_answer": "I've sent a new verification code to your phone number. Please check your messages.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: sendPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_pqr678_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***7843"
+    },
+    {
+      "id": "POT-008",
+      "question": "My number is +1-555-123-4567, send OTP",
+      "expected_answer": "I've updated your phone number to +1-555-123-4567 and sent a verification code.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser, sendPhoneOtp\n📝 Total Steps: 2\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"+1-555-123-4567\"\n}\n🆔 Call ID: call_stu901_updateUser\n📤 Result: User phone number updated successfully to +1-555-123-4567\n──────────────────────────────────────────────────\n\n**Step 2: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_vwx234_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***4567"
+    },
+    {
+      "id": "POT-009",
+      "question": "The code is 555666",
+      "expected_answer": "Your phone number has been successfully verified. You can now proceed with KYC verification.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"555666\"\n}\n🆔 Call ID: call_yza567_checkOtp\n📤 Result: Phone verification successful. User status: KYC_NEEDED"
+    },
+    {
+      "id": "POT-010",
+      "question": "Wrong phone number on my account",
+      "expected_answer": "I can help you update your phone number. Please provide your new phone number with country code (example: +1-555-123-4567):"
+    },
+    {
+      "id": "POT-011",
+      "question": "12345",
+      "expected_answer": "That code appears to be invalid or expired. Please try entering the code again, or I can send you a new one.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"12345\"\n}\n🆔 Call ID: call_bcd890_checkOtp\n📤 Result: Invalid OTP code. Code must be 6 digits."
+    },
+    {
+      "id": "POT-012",
+      "question": "Update to +44 7700 900123",
+      "expected_answer": "I've successfully updated your phone number to +44 7700 900123.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"+44 7700 900123\"\n}\n🆔 Call ID: call_efg123_updateUser\n📤 Result: User phone number updated successfully to +44 7700 900123"
+    },
+    {
+      "id": "POT-013",
+      "question": "mb it was +91 7505179010",
+      "expected_answer": "I've updated your phone number to +91 7505179010 and sent a new verification code.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser, sendPhoneOtp\n📝 Total Steps: 2\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"+91 7505179010\"\n}\n🆔 Call ID: call_hij456_updateUser\n📤 Result: User phone number updated successfully to +91 7505179010\n──────────────────────────────────────────────────\n\n**Step 2: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_klm789_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***9010"
+    },
+    {
+      "id": "POT-014",
+      "question": "987654",
+      "expected_answer": "Perfect! Your phone number has been successfully verified. You now have full access to your account.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"987654\"\n}\n🆔 Call ID: call_nop012_checkOtp\n📤 Result: Phone verification successful. User status: FULL_USER"
+    },
+    {
+      "id": "POT-015",
+      "question": "What's my current phone number?",
+      "expected_answer": "This doesn't appear to be a phone number update request. If you'd like to update your phone number, please let me know your new number."
+    },
+    {
+      "id": "POT-016",
+      "question": "I need to verify my phone",
+      "expected_answer": "I've sent a verification code to your phone number. Please enter the 6-digit code you received.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: sendPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_qrs345_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***7843"
+    },
+    {
+      "id": "POT-017",
+      "question": "My new number is (555) 123-4567",
+      "expected_answer": "I've successfully updated your phone number to (555) 123-4567.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"(555) 123-4567\"\n}\n🆔 Call ID: call_tuv678_updateUser\n📤 Result: User phone number updated successfully to (555) 123-4567"
+    },
+    {
+      "id": "POT-018",
+      "question": "1234567",
+      "expected_answer": "That code appears to be too long. Please enter the 6-digit code you received.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"1234567\"\n}\n🆔 Call ID: call_wxy901_checkOtp\n📤 Result: Invalid OTP code. Code must be exactly 6 digits."
+    },
+    {
+      "id": "POT-019",
+      "question": "Code: 456789",
+      "expected_answer": "Your phone number has been successfully verified. You can now proceed with KYC verification.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"456789\"\n}\n🆔 Call ID: call_zab234_checkOtp\n📤 Result: Phone verification successful. User status: KYC_NEEDED"
+    },
+    {
+      "id": "POT-020",
+      "question": "I didn't receive the code",
+      "expected_answer": "I've sent a new verification code to your phone number. Please check your messages.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: sendPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_cde567_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***7843"
+    },
+    {
+      "id": "POT-021",
+      "question": "Change my number to +49 30 12345678",
+      "expected_answer": "I've successfully updated your phone number to +49 30 12345678.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"+49 30 12345678\"\n}\n🆔 Call ID: call_fgh890_updateUser\n📤 Result: User phone number updated successfully to +49 30 12345678"
+    },
+    {
+      "id": "POT-022",
+      "question": "The verification code is 111111",
+      "expected_answer": "I couldn't verify that code. It appears to be invalid. Please try again or I can send a new code.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"111111\"\n}\n🆔 Call ID: call_ijk123_checkOtp\n📤 Result: Invalid OTP code. Verification failed."
+    },
+    {
+      "id": "POT-023",
+      "question": "Send OTP to +1 415 555 7392",
+      "expected_answer": "I've updated your phone number to +1 415 555 7392 and sent a verification code.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser, sendPhoneOtp\n📝 Total Steps: 2\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"+1 415 555 7392\"\n}\n🆔 Call ID: call_lmn456_updateUser\n📤 Result: User phone number updated successfully to +1 415 555 7392\n──────────────────────────────────────────────────\n\n**Step 2: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_opq789_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***7392"
+    },
+    {
+      "id": "POT-024",
+      "question": "000000",
+      "expected_answer": "That code doesn't appear to be valid. Please enter the 6-digit code from your SMS, or I can send a new one.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"000000\"\n}\n🆔 Call ID: call_rst012_checkOtp\n📤 Result: Invalid OTP code. Verification failed."
+    },
+    {
+      "id": "POT-025",
+      "question": "I want to modify my phone number to +86 138 0013 8000",
+      "expected_answer": "I've successfully updated your phone number to +86 138 0013 8000.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"+86 138 0013 8000\"\n}\n🆔 Call ID: call_uvw345_updateUser\n📤 Result: User phone number updated successfully to +86 138 0013 8000"
+    },
+    {
+      "id": "POT-026",
+      "question": "Can you send me another code?",
+      "expected_answer": "I've sent a new verification code to your phone number. Please check your messages.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: sendPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_xyz678_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***8000"
+    },
+    {
+      "id": "POT-027",
+      "question": "Here's the code: 654321",
+      "expected_answer": "Perfect! Your phone number has been successfully verified. You now have full access to your account.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: checkPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: checkPhoneOtp**\n📥 Input: {\n  \"code\": \"654321\"\n}\n🆔 Call ID: call_abc901_checkOtp\n📤 Result: Phone verification successful. User status: FULL_USER"
+    },
+    {
+      "id": "POT-028",
+      "question": "Phone verification failed multiple times",
+      "expected_answer": "It looks like we're having trouble verifying your phone number right now. I'd recommend connecting you with our support team so they can help you directly. Would you like me to connect you with support now?"
+    },
+    {
+      "id": "POT-029",
+      "question": "My phone is 555.123.4567",
+      "expected_answer": "I've successfully updated your phone number to 555.123.4567.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: updateUser\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: updateUser**\n📥 Input: {\n  \"phoneNumber\": \"555.123.4567\"\n}\n🆔 Call ID: call_def234_updateUser\n📤 Result: User phone number updated successfully to 555.123.4567"
+    },
+    {
+      "id": "POT-030",
+      "question": "Send verification code",
+      "expected_answer": "I've sent a verification code to your phone number. Please enter the 6-digit code you received.\n\n📊 **Tool Execution Summary**\n🔧 Tools Used: sendPhoneOtp\n📝 Total Steps: 1\n\n--- Detailed Tool Calls ---\n\n**Step 1: sendPhoneOtp**\n📥 Input: {}\n🆔 Call ID: call_ghi567_sendOtp\n📤 Result: OTP sent successfully to phone number ending in ***4567"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "test_cases": [
+    {
+      "id": "COT-001",
+      "question": "What currencies can I use?",
+      "expected_answer": "Here are the available currencies you can use on our platform.\n\nTool called: getCurrencies with input: retrieve all supported currencies\nTool output: Supported currencies: USD, EUR, GBP, CAD, AUD, BTC, ETH, USDT, USDC\nActual output: You can use the following currencies: USD, EUR, GBP, CAD, AUD for fiat, and BTC, ETH, USDT, USDC for crypto. Both buying and selling are supported for all listed currencies."
+    },
+    {
+      "id": "COT-002",
+      "question": "How can I buy Bitcoin with USD?",
+      "expected_answer": "I'll help you with buying Bitcoin using USD.\n\nTool called: onramp with input: fromCurrency 'USD', toCurrency 'BTC', operation 'buy'\nTool output: Onramp available: USD to BTC, minimum $10, maximum $10000, fee 1.5%\nActual output: You can buy Bitcoin with USD through our onramp service. Minimum purchase is $10, maximum is $10,000, with a 1.5% fee. Would you like to proceed with a purchase?"
+    },
+    {
+      "id": "COT-003",
+      "question": "I want to sell my Ethereum for EUR",
+      "expected_answer": "I'll check the options for selling Ethereum to EUR.\n\nTool called: offramp with input: fromCurrency 'ETH', toCurrency 'EUR', operation 'sell'\nTool output: Offramp available: ETH to EUR, minimum 0.01 ETH, maximum 50 ETH, fee 2.0%\nActual output: You can sell your Ethereum for EUR through our offramp service. Minimum sale is 0.01 ETH, maximum is 50 ETH, with a 2.0% fee. The funds will be deposited to your bank account."
+    },
+    {
+      "id": "COT-004",
+      "question": "What are the fees for converting USDT to GBP?",
+      "expected_answer": "Let me check the conversion fees for USDT to GBP.\n\nTool called: offramp with input: fromCurrency 'USDT', toCurrency 'GBP', operation 'convert'\nTool output: Conversion fee: USDT to GBP 1.8%, minimum 10 USDT, maximum 25000 USDT\nActual output: The fee for converting USDT to GBP is 1.8%. Minimum conversion amount is 10 USDT, maximum is 25,000 USDT."
+    },
+    {
+      "id": "COT-005",
+      "question": "Can I buy crypto with my credit card?",
+      "expected_answer": "Let me check the available payment methods for crypto purchases.\n\nTool called: onramp with input: paymentMethod 'credit_card', operation 'check_availability'\nTool output: Credit card payments available for BTC, ETH, USDT, USDC with 3.5% fee\nActual output: Yes, you can buy crypto with your credit card. We support BTC, ETH, USDT, and USDC purchases with a 3.5% fee for credit card transactions."
+    },
+    {
+      "id": "COT-006",
+      "question": "What's the current exchange rate for BTC to USD?",
+      "expected_answer": "I'll get the current exchange rate for Bitcoin to USD.\n\nTool called: getCurrencies with input: pair 'BTC/USD', operation 'get_rate'\nTool output: Current rate: 1 BTC = 43,250.00 USD, last updated 2 minutes ago\nActual output: The current exchange rate is 1 BTC = $43,250.00 USD, updated 2 minutes ago. Rates are updated in real-time."
+    },
+    {
+      "id": "COT-007",
+      "question": "How much EUR can I get for 100 USDC?",
+      "expected_answer": "Let me calculate how much EUR you'll receive for 100 USDC.\n\nTool called: offramp with input: amount '100', fromCurrency 'USDC', toCurrency 'EUR', operation 'estimate'\nTool output: Estimate: 100 USDC = 91.50 EUR after 1.8% fee (fee: 1.65 EUR)\nActual output: For 100 USDC, you'll receive approximately 91.50 EUR after the 1.8% conversion fee (1.65 EUR fee deducted)."
+    },
+    {
+      "id": "COT-008",
+      "question": "Is there a limit on how much I can buy?",
+      "expected_answer": "Let me check the purchase limits for your account.\n\nTool called: onramp with input: operation 'check_limits', userTier 'verified'\nTool output: Daily limit: $5,000, Monthly limit: $50,000, Annual limit: $500,000\nActual output: Your purchase limits are: $5,000 daily, $50,000 monthly, and $500,000 annually. These limits apply to all fiat-to-crypto purchases."
+    },
+    {
+      "id": "COT-009",
+      "question": "Can I convert Bitcoin directly to Ethereum?",
+      "expected_answer": "Let me check if direct BTC to ETH conversion is available.\n\nTool called: getCurrencies with input: fromCurrency 'BTC', toCurrency 'ETH', operation 'check_pair'\nTool output: Direct conversion available: BTC to ETH, fee 0.5%, minimum 0.001 BTC\nActual output: Yes, you can convert Bitcoin directly to Ethereum. The conversion fee is 0.5% with a minimum of 0.001 BTC required."
+    },
+    {
+      "id": "COT-010",
+      "question": "What payment methods do you accept?",
+      "expected_answer": "Let me show you all available payment methods.\n\nTool called: onramp with input: operation 'list_payment_methods'\nTool output: Available methods: Bank transfer (0.5% fee), Credit card (3.5% fee), Debit card (2.5% fee), Wire transfer (1.0% fee)\nActual output: We accept the following payment methods: Bank transfer (0.5% fee), Credit card (3.5% fee), Debit card (2.5% fee), and Wire transfer (1.0% fee)."
+    },
+    {
+      "id": "COT-011",
+      "question": "How long does it take to sell crypto and get fiat?",
+      "expected_answer": "Let me check the processing times for crypto-to-fiat transactions.\n\nTool called: offramp with input: operation 'check_processing_time'\nTool output: Processing times: Bank transfer 1-3 days, Wire transfer 3-5 days, depending on bank\nActual output: Crypto-to-fiat transactions typically take 1-3 business days for bank transfers and 3-5 business days for wire transfers, depending on your bank."
+    },
+    {
+      "id": "COT-012",
+      "question": "Can I buy $50 worth of Bitcoin?",
+      "expected_answer": "Let me check if you can purchase $50 worth of Bitcoin.\n\nTool called: onramp with input: amount '50', currency 'USD', targetCurrency 'BTC', operation 'validate_amount'\nTool output: Valid purchase: $50 USD to BTC, fee $0.75, you'll receive ~0.00116 BTC\nActual output: Yes, you can buy $50 worth of Bitcoin. After the 1.5% fee ($0.75), you'll receive approximately 0.00116 BTC."
+    },
+    {
+      "id": "COT-013",
+      "question": "What's the minimum amount I can sell?",
+      "expected_answer": "Let me check the minimum selling amounts for different currencies.\n\nTool called: offramp with input: operation 'get_minimums'\nTool output: Minimum sell amounts: BTC 0.001, ETH 0.01, USDT 10, USDC 10\nActual output: The minimum selling amounts are: 0.001 BTC, 0.01 ETH, 10 USDT, and 10 USDC."
+    },
+    {
+      "id": "COT-014",
+      "question": "Are there any restrictions for my country?",
+      "expected_answer": "Let me check the availability and restrictions for your region.\n\nTool called: getCurrencies with input: operation 'check_region_restrictions', country 'user_location'\nTool output: Region supported: Full service available, all currencies supported\nActual output: Great news! Full service is available in your region with access to all supported currencies and payment methods."
+    },
+    {
+      "id": "COT-015",
+      "question": "How do I cash out my crypto?",
+      "expected_answer": "I'll explain the process for cashing out your cryptocurrency.\n\nTool called: offramp with input: operation 'get_cashout_process'\nTool output: Cashout process: Select crypto → Choose fiat currency → Enter amount → Confirm bank details → Submit transaction\nActual output: To cash out your crypto: 1) Select the cryptocurrency you want to sell, 2) Choose your preferred fiat currency, 3) Enter the amount, 4) Confirm your bank account details, 5) Submit the transaction. Funds typically arrive in 1-3 business days."
+    },
+    {
+      "id": "COT-016",
+      "question": "Can I get a better rate for large transactions?",
+      "expected_answer": "Let me check if volume discounts are available for large transactions.\n\nTool called: getCurrencies with input: operation 'check_volume_discounts', transactionType 'large_volume'\nTool output: Volume discounts available: $25k+ gets 0.3% reduction, $100k+ gets 0.5% reduction\nActual output: Yes, we offer volume discounts for large transactions. Transactions over $25,000 receive a 0.3% fee reduction, and those over $100,000 get a 0.5% reduction."
+    },
+    {
+      "id": "COT-017",
+      "question": "What happens if the price changes during my transaction?",
+      "expected_answer": "Let me explain how price fluctuations are handled during transactions.\n\nTool called: onramp with input: operation 'check_price_protection'\nTool output: Price protection: 15-minute price lock available, rate guaranteed during processing\nActual output: We offer a 15-minute price lock when you initiate a transaction. The exchange rate is guaranteed during the entire processing period, protecting you from price fluctuations."
+    },
+    {
+      "id": "COT-018",
+      "question": "Do you support stablecoins?",
+      "expected_answer": "Let me check which stablecoins are supported.\n\nTool called: getCurrencies with input: category 'stablecoins', operation 'list_supported'\nTool output: Supported stablecoins: USDT, USDC, DAI, BUSD with full buy/sell support\nActual output: Yes, we support several stablecoins including USDT, USDC, DAI, and BUSD. All are available for both buying and selling with full offramp/onramp support."
+    },
+    {
+      "id": "COT-019",
+      "question": "Can I set up recurring crypto purchases?",
+      "expected_answer": "Let me check if recurring purchase options are available.\n\nTool called: onramp with input: operation 'check_recurring_options'\nTool output: Recurring purchases available: Daily, weekly, monthly schedules with same fees\nActual output: Yes, you can set up recurring crypto purchases with daily, weekly, or monthly schedules. The same fee structure applies to recurring purchases as regular transactions."
+    },
+    {
+      "id": "COT-020",
+      "question": "What's the difference between market and limit orders?",
+      "expected_answer": "Let me explain the different order types available.\n\nTool called: getCurrencies with input: operation 'explain_order_types'\nTool output: Market orders: Immediate execution at current price. Limit orders: Execute when price reaches specified level\nActual output: Market orders execute immediately at the current market price, while limit orders only execute when the price reaches your specified level. Market orders guarantee execution but not price, limit orders guarantee price but not execution timing."
+    },
+    {
+      "id": "COT-021",
+      "question": "Are there any hidden fees?",
+      "expected_answer": "Let me provide a complete breakdown of all fees.\n\nTool called: getCurrencies with input: operation 'get_fee_breakdown'\nTool output: All fees disclosed: Trading fees, payment processing fees, network fees. No hidden charges\nActual output: We don't have any hidden fees. All costs are transparently displayed: trading fees (0.5-3.5% depending on payment method), network fees for blockchain transactions, and any payment processing fees from your bank or card provider."
+    },
+    {
+      "id": "COT-022",
+      "question": "Can I buy crypto for someone else?",
+      "expected_answer": "Let me check the policies for third-party purchases.\n\nTool called: onramp with input: operation 'check_third_party_policy'\nTool output: Third-party purchases not allowed due to AML/KYC regulations\nActual output: Due to anti-money laundering (AML) and Know Your Customer (KYC) regulations, you can only buy crypto for yourself using your own verified payment methods and bank accounts."
+    },
+    {
+      "id": "COT-023",
+      "question": "How secure are my transactions?",
+      "expected_answer": "Let me explain our security measures for transactions.\n\nTool called: getCurrencies with input: operation 'get_security_info'\nTool output: Security features: SSL encryption, 2FA required, cold storage, insurance coverage\nActual output: Your transactions are protected by industry-leading security: SSL encryption, mandatory two-factor authentication (2FA), cold storage for crypto assets, and insurance coverage for digital assets."
+    },
+    {
+      "id": "COT-024",
+      "question": "Can I cancel a pending transaction?",
+      "expected_answer": "Let me check the cancellation policy for pending transactions.\n\nTool called: getCurrencies with input: operation 'check_cancellation_policy'\nTool output: Cancellation available: Before processing starts, full refund. After processing begins, not cancellable\nActual output: You can cancel a transaction before processing begins and receive a full refund. Once processing starts (payment is captured), the transaction cannot be cancelled as it's being executed on the blockchain."
+    },
+    {
+      "id": "COT-025",
+      "question": "Do you offer customer support for currency issues?",
+      "expected_answer": "Let me provide information about currency-related customer support.\n\nTool called: getCurrencies with input: operation 'get_support_info'\nTool output: Support available: 24/7 chat, email support, dedicated currency specialists\nActual output: Yes, we offer comprehensive support for currency-related issues including 24/7 live chat, email support, and dedicated currency specialists who can help with exchange rates, transaction issues, and payment methods."
+    }
+  ]
+}

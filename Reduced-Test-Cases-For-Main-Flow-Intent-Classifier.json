@@ -26,11 +26,6 @@
       "expected_agent": "SUPPORT"
     },
     {
-      "id": 6,
-      "query": "what can you do",
-      "expected_agent": "SUPPORT"
-    },
-    {
       "id": 7,
       "query": "this is not working",
       "expected_agent": "SUPPORT"

@@ -2,537 +2,153 @@
   "testCases": [
     {
       "id": 1,
-      "category": "Direct Transfer Fee Query",
       "question": "What are the fees to send 50 EUR?",
-      "expectedBehavior": "Should call estimateTransaction with amount=50, currency=EUR",
-      "expectedResponse": "To send 50 EUR, you'll pay about [X] EUR in fees, and 50 EUR will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in EUR",
-        "Amount taken from account (50 EUR)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 50 EUR, you'll pay about [X] EUR in fees, and 50 EUR will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 2,
-      "category": "Direct Transfer Fee Query",
       "question": "How much does it cost to transfer 100 USD?",
-      "expectedBehavior": "Should call estimateTransaction with amount=100, currency=USD",
-      "expectedResponse": "To send 100 USD, you'll pay about [X] USD in fees, and 100 USD will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in USD",
-        "Amount taken from account (100 USD)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 100 USD, you'll pay about [X] USD in fees, and 100 USD will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 3,
-      "category": "Direct Transfer Fee Query",
       "question": "Fees for sending 1000 INR?",
-      "expectedBehavior": "Should call estimateTransaction with amount=1000, currency=INR",
-      "expectedResponse": "To send 1000 INR, you'll pay about [X] INR in fees, and 1000 INR will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in INR",
-        "Amount taken from account (1000 INR)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 1000 INR, you'll pay about [X] INR in fees, and 1000 INR will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 4,
-      "category": "Percentage/Rate Question",
       "question": "What percentage do you charge?",
-      "expectedBehavior": "Should call getFees with example amount (100), direction=offramp",
-      "expectedResponse": "Our fees combine fixed and variable components to minimize costs. For a 100 [currency] transfer, this works out to about [X]% effective rate, but larger transfers cost less proportionally.",
-      "toolsUsed": "getFees",
-      "shouldMention": [
-        "Fixed and variable components",
-        "Effective rate for example amount",
-        "Larger transfers cost less proportionally"
-      ],
-      "shouldNotMention": [
-        "Simple X% fee",
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "Our fees combine fixed and variable components to minimize costs. For a 100 [currency] transfer, this works out to about [X]% effective rate, but larger transfers cost less proportionally."
     },
     {
       "id": 5,
-      "category": "Percentage/Rate Question",
       "question": "What's your fee rate for transfers?",
-      "expectedBehavior": "Should call getFees with example amount, direction=offramp",
-      "expectedResponse": "Our fees combine fixed and variable components to minimize costs. For a 100 [currency] transfer, this works out to about [X]% effective rate, but larger transfers cost less proportionally.",
-      "toolsUsed": "getFees",
-      "shouldMention": [
-        "Fixed and variable components",
-        "Effective rate",
-        "Larger transfers cost less proportionally"
-      ],
-      "shouldNotMention": [
-        "Simple X% fee",
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "Our fees combine fixed and variable components to minimize costs. For a 100 [currency] transfer, this works out to about [X]% effective rate, but larger transfers cost less proportionally."
     },
     {
       "id": 6,
-      "category": "Currency Conversion Transfer Query",
       "question": "What's the fee to send the EUR equivalent of 50 USD?",
-      "expectedBehavior": "Should call exchangeCurrency (USD to EUR, amount=50), then estimateTransaction with converted amount",
-      "expectedResponse": "To send the EUR equivalent of 50 USD (approximately [X] EUR), you'll pay about [Y] EUR in fees, and [X] EUR will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "exchangeCurrency, estimateTransaction",
-      "shouldMention": [
-        "Converted amount in EUR",
-        "Fee amount in EUR",
-        "Amount taken from account in EUR",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send the EUR equivalent of 50 USD (approximately [X] EUR), you'll pay about [Y] EUR in fees, and [X] EUR will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 7,
-      "category": "Currency Conversion Transfer Query",
       "question": "I want to send 100 dollars worth of euros, what's the cost?",
-      "expectedBehavior": "Should call exchangeCurrency (USD to EUR, amount=100), then estimateTransaction with converted amount",
-      "expectedResponse": "To send the EUR equivalent of 100 USD (approximately [X] EUR), you'll pay about [Y] EUR in fees, and [X] EUR will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "exchangeCurrency, estimateTransaction",
-      "shouldMention": [
-        "Converted amount in EUR",
-        "Fee amount in EUR",
-        "Amount taken from account in EUR",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send the EUR equivalent of 100 USD (approximately [X] EUR), you'll pay about [Y] EUR in fees, and [X] EUR will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 8,
-      "category": "Minimum Transfer Amount",
       "question": "What's the minimum I can send to India?",
-      "expectedBehavior": "Should call exchangeCurrency (USD to INR, amount=1), then estimateTransaction with converted amount",
-      "expectedResponse": "The minimum amount you can send to INR is approximately [X] INR (including fees), which is the equivalent of 1 USD. This minimum applies to international transfers.",
-      "toolsUsed": "exchangeCurrency, estimateTransaction",
-      "shouldMention": [
-        "Minimum amount in INR",
-        "Equivalent of 1 USD",
-        "International transfers minimum"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "The minimum amount you can send to INR is approximately [X] INR (including fees), which is the equivalent of 1 USD. This minimum applies to international transfers."
     },
     {
       "id": 9,
-      "category": "Minimum Transfer Amount",
       "question": "What's the minimum transfer amount in EUR?",
-      "expectedBehavior": "Should call exchangeCurrency (USD to EUR, amount=1), then estimateTransaction with converted amount",
-      "expectedResponse": "The minimum amount you can send to EUR is approximately [X] EUR (including fees), which is the equivalent of 1 USD. This minimum applies to international transfers.",
-      "toolsUsed": "exchangeCurrency, estimateTransaction",
-      "shouldMention": [
-        "Minimum amount in EUR",
-        "Equivalent of 1 USD",
-        "International transfers minimum"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "The minimum amount you can send to EUR is approximately [X] EUR (including fees), which is the equivalent of 1 USD. This minimum applies to international transfers."
     },
     {
       "id": 10,
-      "category": "Top-up/Deposit Question",
       "question": "How much does it cost to add 100 USD to my account?",
-      "expectedBehavior": "Should respond immediately without calling tools",
-      "expectedResponse": "There are no fees when you top up your account with 100 USD—the full amount you deposit goes into your account. There are no fees for any deposit amount, but please note that the maximum you can add is $5,000 and it is the lifetime limit for beta.",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "No fees",
-        "Full amount goes to account",
-        "$5,000 lifetime limit",
-        "Beta limit"
-      ],
-      "shouldNotMention": [
-        "Fee amount",
-        "Percentage",
-        "USDC or token names"
-      ]
+      "expectedResponse": "There are no fees when you top up your account with 100 USD—the full amount you deposit goes into your account. There are no fees for any deposit amount, but please note that the maximum you can add is $5,000 and it is the lifetime limit for beta."
     },
     {
       "id": 11,
-      "category": "Top-up/Deposit Question",
       "question": "Fees for topping up 50 dollars?",
-      "expectedBehavior": "Should respond immediately without calling tools",
-      "expectedResponse": "There are no fees when you top up your account with 50 USD—the full amount you deposit goes into your account. There are no fees for any deposit amount, but please note that the maximum you can add is $5,000 and it is the lifetime limit for beta.",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "No fees",
-        "Full amount goes to account",
-        "$5,000 lifetime limit",
-        "Beta limit"
-      ],
-      "shouldNotMention": [
-        "Fee amount",
-        "Percentage",
-        "USDC or token names"
-      ]
+      "expectedResponse": "There are no fees when you top up your account with 50 USD—the full amount you deposit goes into your account. There are no fees for any deposit amount, but please note that the maximum you can add is $5,000 and it is the lifetime limit for beta."
     },
     {
       "id": 12,
-      "category": "Top-up/Deposit Question",
       "question": "What's the maximum I can deposit?",
-      "expectedBehavior": "Should respond immediately without calling tools",
-      "expectedResponse": "The maximum you can add is $5,000 and it is the lifetime limit for beta. There are no fees when you top up your account—the full amount you deposit goes into your account.",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "$5,000 lifetime limit",
-        "Beta limit",
-        "No fees",
-        "Full amount goes to account"
-      ],
-      "shouldNotMention": [
-        "Fee amount",
-        "Percentage",
-        "USDC or token names"
-      ]
+      "expectedResponse": "The maximum you can add is $5,000 and it is the lifetime limit for beta. There are no fees when you top up your account—the full amount you deposit goes into your account."
     },
     {
       "id": 13,
-      "category": "Top-up/Deposit Question",
       "question": "Are there fees for depositing money?",
-      "expectedBehavior": "Should respond immediately without calling tools",
-      "expectedResponse": "There are no fees when you top up your account—the full amount you deposit goes into your account, regardless of the amount. Please note that the maximum you can add is $5,000 and it is the lifetime limit for beta.",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "No fees",
-        "Full amount goes to account",
-        "Regardless of amount",
-        "$5,000 lifetime limit",
-        "Beta limit"
-      ],
-      "shouldNotMention": [
-        "Fee amount",
-        "Percentage",
-        "USDC or token names"
-      ]
+      "expectedResponse": "There are no fees when you top up your account—the full amount you deposit goes into your account, regardless of the amount. Please note that the maximum you can add is $5,000 and it is the lifetime limit for beta."
     },
     {
       "id": 14,
-      "category": "Ambiguous/Missing Information",
       "question": "What are the fees?",
-      "expectedBehavior": "Should ask for missing information (amount, currency, transfer type)",
-      "expectedResponse": "To help you with fee information, I need a bit more detail. Are you asking about: 1) Sending money (transfer), or 2) Adding money to your account (top-up)? And if it's a transfer, what amount and which currency?",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "Need more information",
-        "Transfer or top-up",
-        "Amount and currency"
-      ],
-      "shouldNotMention": [
-        "Specific fee amounts",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To help you with fee information, I need a bit more detail. Are you asking about: 1) Sending money (transfer), or 2) Adding money to your account (top-up)? And if it's a transfer, what amount and which currency?"
     },
     {
       "id": 15,
-      "category": "Ambiguous/Missing Information",
       "question": "How much to send money to Europe?",
-      "expectedBehavior": "Should ask for missing information (amount and specific currency)",
-      "expectedResponse": "To calculate the fees for sending money to Europe, I need to know: What amount would you like to send, and which currency (EUR, GBP, etc.)?",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "Need amount",
-        "Need specific currency"
-      ],
-      "shouldNotMention": [
-        "Specific fee amounts",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To calculate the fees for sending money to Europe, I need to know: What amount would you like to send, and which currency (EUR, GBP, etc.)?"
     },
     {
       "id": 16,
-      "category": "Ambiguous/Missing Information",
       "question": "I want to transfer 100",
-      "expectedBehavior": "Should ask for missing currency information",
-      "expectedResponse": "I can help you with that! Which currency would you like to send - USD, EUR, GBP, INR, or another currency?",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "Need currency",
-        "Examples of currencies"
-      ],
-      "shouldNotMention": [
-        "Specific fee amounts",
-        "USDC or token names"
-      ]
+      "expectedResponse": "I can help you with that! Which currency would you like to send - USD, EUR, GBP, INR, or another currency?"
     },
     {
       "id": 17,
-      "category": "Direct Transfer Fee Query",
       "question": "Cost to transfer 75 dollars?",
-      "expectedBehavior": "Should call estimateTransaction with amount=75, currency=USD",
-      "expectedResponse": "To send 75 USD, you'll pay about [X] USD in fees, and 75 USD will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in USD",
-        "Amount taken from account (75 USD)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 75 USD, you'll pay about [X] USD in fees, and 75 USD will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 18,
-      "category": "Direct Transfer Fee Query",
       "question": "What will I be charged to send 200 EUR to my friend?",
-      "expectedBehavior": "Should call estimateTransaction with amount=200, currency=EUR",
-      "expectedResponse": "To send 200 EUR, you'll pay about [X] EUR in fees, and 200 EUR will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in EUR",
-        "Amount taken from account (200 EUR)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 200 EUR, you'll pay about [X] EUR in fees, and 200 EUR will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 19,
-      "category": "Direct Transfer Fee Query",
       "question": "Fees for sending 25 GBP?",
-      "expectedBehavior": "Should call estimateTransaction with amount=25, currency=GBP",
-      "expectedResponse": "To send 25 GBP, you'll pay about [X] GBP in fees, and 25 GBP will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in GBP",
-        "Amount taken from account (25 GBP)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 25 GBP, you'll pay about [X] GBP in fees, and 25 GBP will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 20,
-      "category": "Currency Conversion Transfer Query",
       "question": "Fees for sending 75 USD worth of INR?",
-      "expectedBehavior": "Should call exchangeCurrency (USD to INR, amount=75), then estimateTransaction with converted amount",
-      "expectedResponse": "To send the INR equivalent of 75 USD (approximately [X] INR), you'll pay about [Y] INR in fees, and [X] INR will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "exchangeCurrency, estimateTransaction",
-      "shouldMention": [
-        "Converted amount in INR",
-        "Fee amount in INR",
-        "Amount taken from account in INR",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send the INR equivalent of 75 USD (approximately [X] INR), you'll pay about [Y] INR in fees, and [X] INR will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 21,
-      "category": "Minimum Transfer Amount",
       "question": "What's the smallest amount I can transfer to Europe?",
-      "expectedBehavior": "Should ask for specific currency (EUR, GBP, etc.) since Europe has multiple currencies",
-      "expectedResponse": "To tell you the minimum transfer amount, I need to know which European currency you're sending to. Are you sending EUR, GBP, or another currency?",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "Need specific currency",
-        "Examples like EUR, GBP"
-      ],
-      "shouldNotMention": [
-        "Specific amounts",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To tell you the minimum transfer amount, I need to know which European currency you're sending to. Are you sending EUR, GBP, or another currency?"
     },
     {
       "id": 22,
-      "category": "Minimum Transfer Amount",
       "question": "Minimum amount for GBP transfers?",
-      "expectedBehavior": "Should call exchangeCurrency (USD to GBP, amount=1), then estimateTransaction with converted amount",
-      "expectedResponse": "The minimum amount you can send to GBP is approximately [X] GBP (including fees), which is the equivalent of 1 USD. This minimum applies to international transfers.",
-      "toolsUsed": "exchangeCurrency, estimateTransaction",
-      "shouldMention": [
-        "Minimum amount in GBP",
-        "Equivalent of 1 USD",
-        "International transfers minimum"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "The minimum amount you can send to GBP is approximately [X] GBP (including fees), which is the equivalent of 1 USD. This minimum applies to international transfers."
     },
     {
       "id": 23,
-      "category": "Edge Case",
       "question": "Fees for sending 0.50 EUR?",
-      "expectedBehavior": "Should call estimateTransaction and likely inform about minimum transfer amount",
-      "expectedResponse": "The amount you're trying to send (0.50 EUR) is below the minimum transfer amount. The minimum amount you can send is approximately [X] EUR (including fees), which is the equivalent of 1 USD.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Below minimum",
-        "Minimum transfer amount",
-        "Equivalent of 1 USD"
-      ],
-      "shouldNotMention": [
-        "USDC or token names"
-      ]
+      "expectedResponse": "The amount you're trying to send (0.50 EUR) is below the minimum transfer amount. The minimum amount you can send is approximately [X] EUR (including fees), which is the equivalent of 1 USD."
     },
     {
       "id": 24,
-      "category": "Edge Case",
       "question": "What does it cost to send 10000 USD?",
-      "expectedBehavior": "Should call estimateTransaction with amount=10000, currency=USD",
-      "expectedResponse": "To send 10000 USD, you'll pay about [X] USD in fees, and 10000 USD will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in USD",
-        "Amount taken from account (10000 USD)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 10000 USD, you'll pay about [X] USD in fees, and 10000 USD will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 25,
-      "category": "Edge Case",
       "question": "What's the cost for 1 USD transfer?",
-      "expectedBehavior": "Should call estimateTransaction with amount=1, currency=USD",
-      "expectedResponse": "To send 1 USD, you'll pay about [X] USD in fees, and 1 USD will be taken from your account. This is the minimum transfer amount. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in USD",
-        "Amount taken from account (1 USD)",
-        "Minimum transfer amount",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 1 USD, you'll pay about [X] USD in fees, and 1 USD will be taken from your account. This is the minimum transfer amount. Larger transfers have better rates."
     },
     {
       "id": 26,
-      "category": "Conversational/Casual",
       "question": "hey how much to send 50 bucks?",
-      "expectedBehavior": "Should call estimateTransaction with amount=50, currency=USD",
-      "expectedResponse": "To send 50 USD, you'll pay about [X] USD in fees, and 50 USD will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in USD",
-        "Amount taken from account (50 USD)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 50 USD, you'll pay about [X] USD in fees, and 50 USD will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 27,
-      "category": "Conversational/Casual",
       "question": "quick question - fees for 40 EUR?",
-      "expectedBehavior": "Should call estimateTransaction with amount=40, currency=EUR",
-      "expectedResponse": "To send 40 EUR, you'll pay about [X] EUR in fees, and 40 EUR will be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "estimateTransaction",
-      "shouldMention": [
-        "Fee amount in EUR",
-        "Amount taken from account (40 EUR)",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Total cost",
-        "Percentage fee",
-        "USDC or token names"
-      ]
+      "expectedResponse": "To send 40 EUR, you'll pay about [X] EUR in fees, and 40 EUR will be taken from your account. Larger transfers have better rates."
     },
     {
       "id": 28,
-      "category": "Top-up/Deposit Question",
       "question": "Can I add 10000 USD?",
-      "expectedBehavior": "Should respond about exceeding deposit limit",
-      "expectedResponse": "The maximum you can add is $5,000 and it is the lifetime limit for beta. You cannot deposit 10000 USD as it exceeds this limit. There are no fees when you top up your account—the full amount you deposit goes into your account.",
-      "toolsUsed": "None",
-      "shouldMention": [
-        "$5,000 lifetime limit",
-        "Beta limit",
-        "Exceeds limit",
-        "No fees",
-        "Full amount goes to account"
-      ],
-      "shouldNotMention": [
-        "Fee amount",
-        "USDC or token names"
-      ]
+      "expectedResponse": "The maximum you can add is $5,000 and it is the lifetime limit for beta. You cannot deposit 10000 USD as it exceeds this limit. There are no fees when you top up your account—the full amount you deposit goes into your account."
     },
     {
       "id": 29,
-      "category": "Percentage/Rate Question",
       "question": "Are your fees flat or percentage-based?",
-      "expectedBehavior": "Should call getFees or explain fee structure",
-      "expectedResponse": "Our fees combine fixed and variable components to minimize costs. This means we use both flat and percentage elements. For example, for a 100 [currency] transfer, this works out to about [X]% effective rate, but larger transfers cost less proportionally.",
-      "toolsUsed": "getFees",
-      "shouldMention": [
-        "Fixed and variable components",
-        "Both flat and percentage elements",
-        "Effective rate",
-        "Larger transfers cost less"
-      ],
-      "shouldNotMention": [
-        "Simple X% fee",
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "Our fees combine fixed and variable components to minimize costs. This means we use both flat and percentage elements. For example, for a 100 [currency] transfer, this works out to about [X]% effective rate, but larger transfers cost less proportionally."
     },
     {
       "id": 30,
-      "category": "General Inquiry",
       "question": "How do your fees work?",
-      "expectedBehavior": "Should explain fee structure, possibly with example using getFees",
-      "expectedResponse": "Our fee structure uses fixed and variable components to minimize costs. For example, for a 100 [currency] transfer, you'd pay about [X] [currency] in fees, and 100 [currency] would be taken from your account. Larger transfers have better rates.",
-      "toolsUsed": "getFees or estimateTransaction",
-      "shouldMention": [
-        "Fixed and variable components",
-        "Example with specific amount",
-        "Larger transfers have better rates"
-      ],
-      "shouldNotMention": [
-        "Simple X% fee",
-        "Total cost",
-        "USDC or token names"
-      ]
+      "expectedResponse": "Our fee structure uses fixed and variable components to minimize costs. For example, for a 100 [currency] transfer, you'd pay about [X] [currency] in fees, and 100 [currency] would be taken from your account. Larger transfers have better rates."
     }
   ]
 }

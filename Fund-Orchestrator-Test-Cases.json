@@ -1,0 +1,129 @@
+{
+  "test_cases": [
+    {
+      "id": "FOT-001",
+      "question": "What's my balance?",
+      "expected_answer": "I'll check your current balance for you.\n\nTool called: checkBalance with input: walletUuid, chain, token\nTool output: Current balance retrieved from wallet\nActual output: Your current wallet balance is displayed with proper currency formatting."
+    },
+    {
+      "id": "FOT-002",
+      "question": "Check my account balance",
+      "expected_answer": "Let me retrieve your account balance information.\n\nTool called: checkBalance with input: walletUuid, chain, token\nTool output: Balance information with currency details\nActual output: Balance information retrieved and formatted according to currency rules."
+    },
+    {
+      "id": "FOT-003",
+      "question": "I want to add $500 to my account",
+      "expected_answer": "I'll help you add $500 to your account.\n\nTool called: getLinkBankAccountStatus with input: unblock_session_id\nTool output: Account status retrieved, then appropriate funding workflow\nActual output: Amount extracted ($500), validation passed, proceeds to funding workflow based on account status."
+    },
+    {
+      "id": "FOT-004",
+      "question": "Fund my account with $300",
+      "expected_answer": "I'll process your $300 funding request.\n\nTool called: getLinkBankAccountStatus, funding tools as needed\nTool output: Account status checked, funding workflow initiated\nActual output: Amount extracted ($300), validated against limits, appropriate funding workflow initiated."
+    },
+    {
+      "id": "FOT-005",
+      "question": "Can I add $5 to my wallet?",
+      "expected_answer": "Let me check if $5 meets our minimum requirements.\n\nTool called: None (amount validation)\nTool output: Amount validation fails - below minimum\nActual output: The minimum funding amount is $10. Please enter an amount of at least $10."
+    },
+    {
+      "id": "FOT-006",
+      "question": "I want to transfer $6000",
+      "expected_answer": "Let me check if $6000 is within our limits.\n\nTool called: None (amount validation)\nTool output: Amount validation fails - above maximum\nActual output: Funding isn't available right now. The maximum you can add is $5,000 and it is the lifetime limit for beta."
+    },
+    {
+      "id": "FOT-007",
+      "question": "How do I fund my account?",
+      "expected_answer": "I'll check your account setup and provide funding instructions.\n\nTool called: getLinkBankAccountStatus with input: unblock_session_id\nTool output: Account status retrieved\nActual output: Instructions provided based on current account status (profile creation, bank linking, or direct funding)."
+    },
+    {
+      "id": "FOT-008",
+      "question": "I need to connect my bank account",
+      "expected_answer": "I'll help you connect your bank account for funding.\n\nTool called: getLinkBankAccountStatus, createLinkedBankAccountProfile if needed\nTool output: Profile creation and bank connection workflow initiated\nActual output: To fund your account, you'll need to connect your bank account for transfers. Please provide your routing number and account number for the bank account you want to connect."
+    },
+    {
+      "id": "FOT-009",
+      "question": "Show me my transaction history",
+      "expected_answer": "I'll retrieve your recent transaction history.\n\nTool called: queryAccountStatement with input: unblockSessionId, query parameters\nTool output: Recent transactions with details\nActual output: Recent transactions displayed with proper formatting, emojis for direction (🟢 incoming, 🔴 outgoing), and current balance."
+    },
+    {
+      "id": "FOT-010",
+      "question": "What are my recent transactions?",
+      "expected_answer": "Let me get your recent transaction activity.\n\nTool called: queryAccountStatement with input: session and query parameters\nTool output: Transaction list with amounts, dates, recipients\nActual output: Transaction list with amounts, dates, recipients, and status information formatted properly."
+    },
+    {
+      "id": "FOT-011",
+      "question": "Can you show me more transaction details?",
+      "expected_answer": "I'll get detailed information about your transactions.\n\nTool called: queryAccountStatement with specific parameters\nTool output: Detailed transaction information retrieved\nActual output: Detailed transaction information including amount, currency, recipient, status, and date without unnecessary offers for more details."
+    },
+    {
+      "id": "FOT-012",
+      "question": "How much does it cost to transfer money?",
+      "expected_answer": "I'll provide information about transfer fees.\n\nTool called: None (policy information)\nTool output: Fee information from system knowledge\nActual output: There are no fees for ACH pull transfers."
+    },
+    {
+      "id": "FOT-013",
+      "question": "How long do transfers take?",
+      "expected_answer": "Let me explain the transfer processing times.\n\nTool called: None (policy information)\nTool output: Processing time information from system knowledge\nActual output: ACH pull transfers typically take 5 business days to complete and appear in your account."
+    },
+    {
+      "id": "FOT-014",
+      "question": "Can I use wire transfers?",
+      "expected_answer": "I'll check what transfer methods are supported.\n\nTool called: None (policy information)\nTool output: Supported transfer method information\nActual output: Traditional bank transfers are not supported. You can only fund your account by connecting your bank account for ACH pull transfers."
+    },
+    {
+      "id": "FOT-015",
+      "question": "Are you sure you want to transfer $100?",
+      "expected_answer": "I'll handle the transfer confirmation process.\n\nTool called: Confirmation handling workflow\nTool output: Awaiting user confirmation\nActual output: If user confirms with 'yes', 'confirm', 'proceed', etc., then pullFundsFromLinkedBankAccount tool is called and transfer initiated."
+    },
+    {
+      "id": "FOT-016",
+      "question": "Yes, proceed with the transfer",
+      "expected_answer": "I'll initiate the transfer now.\n\nTool called: pullFundsFromLinkedBankAccount with input: unblockSessionId, currency, amount\nTool output: Transfer initiated successfully\nActual output: Transfer of $[amount] has been initiated from your connected bank account."
+    },
+    {
+      "id": "FOT-017",
+      "question": "Can you generate a receipt for my transfer?",
+      "expected_answer": "I'll check if receipt generation is available.\n\nTool called: None (system limitation)\nTool output: Receipt generation not supported\nActual output: Receipt limitation explained and alternative offered: I cannot provide receipts, but I can show you your transaction history."
+    },
+    {
+      "id": "FOT-018",
+      "question": "Break down my spending by category",
+      "expected_answer": "I'll check what transaction analysis is available.\n\nTool called: None (system limitation)\nTool output: Transaction categorization not supported\nActual output: I can show your transaction history with amounts, dates, and recipients, but I'm not able to categorize transactions by type or provide detailed spending breakdowns. Would you like me to show your recent transactions?"
+    },
+    {
+      "id": "FOT-019",
+      "question": "What's the weather like?",
+      "expected_answer": "This question is outside my scope of funding and account services.\n\nTool called: None (off-topic)\nTool output: Question not related to funding services\nActual output: This feature is not supported - routed to support agent"
+    },
+    {
+      "id": "FOT-020",
+      "question": "Help me with my password",
+      "expected_answer": "Password assistance is outside my funding agent capabilities.\n\nTool called: None (off-topic)\nTool output: Question not related to funding services\nActual output: This feature is not supported - routed to support agent"
+    },
+    {
+      "id": "FOT-021",
+      "question": "I want to fund my account but not sure how much",
+      "expected_answer": "I'll check your account status and help you determine an amount.\n\nTool called: getLinkBankAccountStatus, checkBalance\nTool output: Account status checked, balance retrieved\nActual output: Account status checked, then 'How much would you like to transfer? (Minimum $10, maximum $5,000 and it is the lifetime limit for beta.)'"
+    },
+    {
+      "id": "FOT-022",
+      "question": "Can I add 1000 to my account?",
+      "expected_answer": "I'll process your request to add 1000 to your account.\n\nTool called: getLinkBankAccountStatus and funding workflow\nTool output: Account status verified, funding workflow initiated\nActual output: Amount extracted ($1000 USD assumed), validated, proceeds to appropriate funding workflow based on account status."
+    },
+    {
+      "id": "FOT-023",
+      "question": "What happens if there's a technical issue?",
+      "expected_answer": "I'll explain our error handling procedures.\n\nTool called: None (error handling information)\nTool output: Error handling policy information\nActual output: We are experiencing a technical issue. Please try again later. or Would you like to retry? depending on the specific error."
+    },
+    {
+      "id": "FOT-024",
+      "question": "Show me all my transactions from last month",
+      "expected_answer": "I'll retrieve your transactions from last month.\n\nTool called: queryAccountStatement with date parameters\nTool output: Transactions filtered by last month date range\nActual output: Transactions filtered by date range, formatted with proper transaction details and current balance."
+    },
+    {
+      "id": "FOT-025",
+      "question": "I want to unlink my bank account",
+      "expected_answer": "I'll help you unlink your bank account.\n\nTool called: unlinkBankAccount with input: unblockSessionId\nTool output: Bank account unlinking process completed\nActual output: Bank account unlinking process initiated through the unlinkBankAccount tool."
+    }
+  ]
+}
